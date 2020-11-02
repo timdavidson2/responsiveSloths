@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+/* font-family: 'Syne Mono', monospace; */
+@font-face{
+    font-family:jungle; src:url(jungle.ttf);
+}
+
+*{
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 140px;
+    padding: 20px;
+    background: rgba(115,167,136,.7);
+    margin-bottom: 20px;
+}
+header a{
+    text-decoration: none;
+}
+.logo{
+    background:url(images/logo.png) no-repeat;
+    background-size: 100px;
+    font-family: jungle;
+    font-size: 3rem;
+    color: #135e46;
+    text-shadow: 3px 3px black;
+    padding-left:100px;
+    transition: .4s;
+}
+.logo:hover{
+    transform: translate(10px);
+    color:yellowgreen;
+    /* transform: scale(2); */
+}
+nav{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    font-family: jungle;
+    color: burlywood;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px black;
+    transition: .3s;
+
+}
+nav a:hover{
+    color: yellowgreen;
+    transform: scale(2);
+}
+.banner{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background: url(images/slothStare.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.banner:hover .slothText{
+    opacity: 1;
+}
+.slothText{
+    width: 30%;
+    height: auto;
+    background: rgba(115,167,136,.7);
+    border-radius: 20px;
+    padding: 15px;
+    margin-left: 20px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    transition: .5s;
+    font-size: 1.1rem;
+}
+.meetSloths{
+    height: 50vh;
+    width: 100%;
+    background: rgba(115,167,136,.7);
+}
+.sloths{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+h1{
+    font-family: 'Roboto' , sans-serif;
+    font-size:1.7rem;
+    color:white;
+    text-shadow:2px 2px black;
+    margin:0 0 40px 30px;
+    padding-top:40px;
+
+}
+.sloths div{
+    width:25%;
+    height:30vh;
+    border:5px white solid;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    background-position:center;
+    background-size:cover;
+}
+.sloth1{
+    background:url(images/slothHanging.jpg) no-repeat;
+}
+.sloth2{
+    background:url(images/slothClimbing.jpg) no-repeat;
+}
+.sloth3{
+    background:url(images/slothChilling.jpg) no-repeat;
+}
+.sloths div div{
+    width:70%;
+    height:auto;
+    background:rgba(115,167,136,.9);
+    border-radius:10px;
+    padding:15px;
+    font-size:1rem;
+    color:white;
+    text-shadow:1px 1px black;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    opacity:0;
+    transition:.5s;
+}
+.sloths div:hover div{
+    opacity:1;
+}
+footer{
+    display:flex;
+    height:10vh;
+    width:100%;
+    justify-content: space-evenly;
+    align-items:center;
+}
+footer img{
+    width:50px;
+}
+footer span{
+    font-family: 'Roboto', sans-serif;
+}
+footer a{
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    font-size:1rem;
+    transition:.3s;
+}
+footer a:hover{
+    color:#135e46;
+    transform:scale(1.2);
+}
+
+/*************MOBILE STYLES*****************/
+@media(max-width:800px){/*anything less than 800px will inherit the styles*/
+    header{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+        height:180px;
+        padding:10px;
+        margin-bottom:10px;
+    }
+    .logo{        
+        background-size:80px;
+        font-size:2.3rem;
+        color:#135e46;
+        padding-left:80px;
+    }
+    nav{
+        display:flex;
+        width:100%;
+        justify-content: space-evenly;
+    }
+    nav a{        
+        font-size:1.5rem;
+    }
+    .banner{
+        display:flex;
+        width:100%;
+        height:60vh;
+        align-items:center;
+        margin-bottom:20px;
+    }
+    .banner:hover .slothText{
+        opacity:1;
+    }
+    .slothText{
+        width:100%;        
+        padding:10px;
+        margin-right:20px;
+        opacity:1;
+        font-size:.9rem;
+        position: relative;
+        top:30%;
+    }
+    .meetSloths{
+        height:auto;
+        width:100%;
+        background:rgba(115,167,136,.8);
+        text-align:center;
+    }
+    .sloths{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-evenly;
+        align-items:center;
+    }
+    h1{
+        font-size:1.5rem;
+    }
+    .sloths div{
+        width:90%;
+        height:35vh;
+        margin-bottom:20px;
+    }
+    .sloths div div{
+        width:90%;
+        height:auto;
+        padding:10px;
+        font-size:1rem;
+        text-align:center;
+        opacity:1;
+        position: relative;
+        top:35%;
+    }
+    footer{
+        display:flex;
+        flex-direction:column;
+        height:15vh;
+    }
+    footer img{
+        display:none;
+    }
+}/*closing media query bracket*/
+
+
+
